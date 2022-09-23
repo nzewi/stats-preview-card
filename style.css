@@ -1,0 +1,187 @@
+/*******************************************
+MODERN CSS RESET
+******************************************/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /********************************************
+  ***END OF RESET****************************
+  *******************************************/
+
+
+
+html {
+    font-size: 62.5%; /* to make 1rem = 10px */
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 400;
+  }
+  
+  main {
+  background-color: hsl(233, 47%, 7%);
+  height: 100%;
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.accent {
+  color: hsl(277, 64%, 61%);
+  font-weight: 700;
+}
+
+.card {
+  background-color: hsl(244, 38%, 16%);
+  border-radius: .5rem;
+  /* padding: 4rem 2rem; */
+  max-width: 34rem;
+  overflow: hidden;
+  
+  text-align: center;
+
+
+}
+.card__picture {
+  background-color: rgb(157 0 255);
+}
+.card__img {
+  opacity: .4;
+}
+
+.card__content {
+  padding: 3rem 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card__heading {
+  font-family: 'Inter',serif;
+  font-size: 3rem;
+  color: hsl(0, 0%, 100%);
+  line-height: 1.2;
+  font-weight: 700;
+  
+}
+
+.card__stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.card__stats:last-child {
+  margin-bottom: 1rem;
+}
+.card__stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__stat-heading {
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.6);
+
+}
+.card__stat-value {
+  font-family: 'Inter',serif;
+  font-size: 3rem;
+  font-weight: 700;
+  /* text-transform: normal; */
+  color: hsl(0, 0%, 100%);
+}
+
+
+
+@media (min-width: 75em) {
+  .card {
+    max-width: 95rem;
+    text-align: left;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+  .card__content {
+    padding: 6rem 5rem 4rem;
+    gap: 2rem;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    
+  }
+
+  .card__img {
+    height: 100%;
+  }
+
+  .card__stats {
+
+    margin-top: 2rem;
+    flex-direction: row;
+    justify-content: start;
+    gap: 4rem;
+  }
+}
+
+
